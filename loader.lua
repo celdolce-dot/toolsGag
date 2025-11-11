@@ -299,19 +299,19 @@ end)
 
 local Title = Instance.new("TextLabel")
 Title.Size = UDim2.new(1, -40, 1, 0)
-Title.Position = UDim2.new(0, 30, 0, 0)
+Title.Position = UDim2.new(0, 0, 0, 0)
 Title.BackgroundTransparency = 1
-Title.Text = "Server Link"
+Title.Text = "TOOLS HUB"
 Title.TextColor3 = Color3.fromRGB(255, 255, 255)
 Title.Font = Enum.Font.GothamBold
 Title.TextSize = 22
-Title.TextXAlignment = Enum.TextXAlignment.Left
+Title.TextXAlignment = Enum.TextXAlignment.Center
 Title.Parent = TopBar
 
 local InputBox = Instance.new("TextBox")
 InputBox.Size = UDim2.new(1, -60, 0, 52)
 InputBox.Position = UDim2.new(0, 30, 0, 90)
-InputBox.BackgroundColor3 = Color3.fromRGB(45, 45, 65)
+InputBox.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 InputBox.BackgroundTransparency = 0
 InputBox.TextColor3 = Color3.fromRGB(255, 255, 255)
 InputBox.PlaceholderText = "https://www.roblox.com/share?code=..."
@@ -342,7 +342,7 @@ InputCorner.Parent = InputBox
 local StartButton = Instance.new("TextButton")
 StartButton.Size = UDim2.new(1, -60, 0, 52)
 StartButton.Position = UDim2.new(0, 30, 0, 170)
-StartButton.BackgroundColor3 = Color3.fromRGB(50, 120, 220)
+StartButton.BackgroundColor3 = Color3.fromRGB(148, 0, 211)
 StartButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 StartButton.Text = "Continue"
 StartButton.Font = Enum.Font.GothamBold
